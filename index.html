@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="keywords" content="speech,synthesis,toy,sound,experimental">
+    <meta name="description" content="Make up silly words in German">
+    <meta name="author" content="Stefan Kreitmayer">
+    <title>Entengesicht</title>
+    <script type="text/javascript" src="target/elm.js"></script>
+  </head>
+
+  <body style="margin: 0; padding: 0; background-color: #eee;">
+  </body>
+
+  <script type="text/javascript">
+    <!--
+    var app = Elm.Main.fullscreen();
+
+    var msg = new SpeechSynthesisUtterance();
+    msg.lang = 'de-DE';
+
+    app.ports.speak.subscribe(function(text){
+      msg.text = text;
+      speechSynthesis.speak(msg);
+    });
+
+    //-->
+  </script>
+</html>
