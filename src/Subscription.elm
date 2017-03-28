@@ -4,7 +4,9 @@ import Model exposing (..)
 
 
 type Msg
-  = Mutate MutationTarget
+  = Start
+  | Mutate MutationTarget
+
 
 type MutationTarget
   = Part1 | Part2

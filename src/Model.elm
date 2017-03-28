@@ -4,9 +4,11 @@ import Model.Scene exposing (..)
 
 
 type alias Model =
-  { scene : Scene }
+  { scene : Scene
+  , started : Bool }
 
 
 initialModel : Model
 initialModel =
-  { scene = initialScene }
+  { scene = initialScene
+  , started = False }

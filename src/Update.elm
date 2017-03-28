@@ -12,6 +12,12 @@ import Debug exposing (log)
 update : Msg -> Model -> (Model, Cmd Msg)
 update action ({scene} as model) =
   case action of
+    Start ->
+      let
+          speechOutput = glue scene.compound
+      in
+          ({ model | started = True }, speak speechOutput)
+
     Mutate target ->
       let
           seed = scene.seed
