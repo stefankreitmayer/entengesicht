@@ -1,6 +1,6 @@
 module View exposing (view)
 
-import Html exposing (Html, h2, div)
+import Html exposing (Html, h2, div, footer)
 import Html.Attributes exposing (class)
 import Html.Events exposing (onClick)
 
@@ -26,7 +26,7 @@ viewStartScreen scene =
       div
         [ class "Screen" ]
         [ h2 [] [ Html.text "Turn audio on" ]
-        , buttonGroup [ button ]
+        , footer [] [ button ]
         ]
 
 viewPlayScreen : Scene -> Html Msg
@@ -38,12 +38,5 @@ viewPlayScreen scene =
       div
         [ class "Screen" ]
         [ h2 [] [ Html.text (glue scene.compound) ]
-        , buttonGroup [ button1, button2 ]
+        , footer [] [ div [ class "ButtonRow" ] [ button1, button2 ] ]
         ]
-
-
-buttonGroup : List (Html Msg) -> Html Msg
-buttonGroup buttons =
- div
-   [ class "ButtonGroup" ]
-   buttons

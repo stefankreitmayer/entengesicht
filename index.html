@@ -15,28 +15,33 @@
         margin-top: 35vh;
       }
       button {
+        display: table-cell;
         border: 1px solid #555;
-        display: inline-block;
         width: 120px;
         height: 120px;
-        margin: 25px;
+        margin: 0;
       }
       button + button {
-        margin-left: 0;
+        margin-left: 27px;
       }
       button:focus {
         outline: 0;
+      }
+      footer {
+        position: fixed;
+        bottom: 27px;
+        left: 0;
+        width: 100%;
+        text-align: center;
       }
       .Screen {
         max-width: 320px;
         margin: 0 auto;
         text-align: center;
       }
-      .ButtonGroup {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+      .ButtonRow {
+        display: table;
+        margin: 0 auto;
       }
     </style>
   </head>
